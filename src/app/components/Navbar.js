@@ -12,7 +12,7 @@ import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import { useState } from 'react';
 import Link from 'next/link';
-import { Button, List, ListItem, ListItemText, Stack } from '@mui/material';
+import { Stack } from '@mui/material';
 
 
 export default function Navbar() {
@@ -36,7 +36,8 @@ export default function Navbar() {
                 horizontal: 'right'
             }}
             sx={{
-                top: { sm: '57px', xs: '50px' },
+                top: { sm: '48px', xs: '40px' },
+                right: '0px'
             }}
             open={isMobileMenuOpen}
             onClose={handleMobileMenuClose}
@@ -72,8 +73,8 @@ export default function Navbar() {
     );
 
     return (
-        <Box sx={{ flexGrow: 1 }}>
-            <AppBar position="static" color="transparent">
+        <Box sx={{ flexGrow: 1, maxWidth: '1140px', margin: 'auto' }}>
+            <AppBar position="static" color="transparent" sx={{ boxShadow: 'none' }}>
                 <Toolbar>
                     <Typography
                         variant="h6"

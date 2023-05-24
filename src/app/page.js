@@ -1,10 +1,18 @@
+"use client"
+
+import { Box } from "@mui/material";
+import Banner from "./components/Banner";
 import Navbar from "./components/Navbar";
 
 
 export default function Home() {
   return (
-    <>
+    <Box sx={{
+      maxWidth: '1500px',
+      margin: 'auto'
+    }}>
       <Navbar></Navbar>
-    </>
+      <Banner></Banner>
+    </Box>
   )
 }
