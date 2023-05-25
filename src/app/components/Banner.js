@@ -19,7 +19,7 @@ const Banner = () => {
 
     return (
         <>
-            <Box sx={{ maxWidth: '1500px', backgroundColor: '#3B5D50' }}>
+            <Box sx={{ maxWidth: '1500px', backgroundColor: '#3B5D50', marginBottom: '140px' }}>
                 <StyledBanner >
                     <Box sx={{
                         display: 'flex',
