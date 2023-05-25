@@ -5,65 +5,55 @@ import { Box, Button, Grid, Typography } from "@mui/material";
 import product1 from "../../../public/assets/images/product-1.png"
 import product2 from "../../../public/assets/images/product-2.png"
 import product3 from "../../../public/assets/images/product-3.png"
+import CustomButton from "@/helpers/CustomButton";
 
 
 
 const BelowBennerSection = () => {
     const products = [product1, product2, product3];
     return (
-        <Box sx={{
-            display: 'flex',
-            gap: '20px',
-            flexDirection: { lg: 'row', md: 'column', sm: 'column', xs: 'column' },
-            padding: '5px',
-            marginBottom: '140px'
-        }}>
+        <Box sx={{ maxWidth: '1140px', margin: 'auto', }}>
             <Box sx={{
                 display: 'flex',
                 gap: '20px',
-                flexDirection: 'column',
-                justifyContent: 'center',
-                alignItems: 'flex-start',
-                width: { lg: '265px', md: '90%' },
-                margin: 'auto'
+                flexDirection: { md: 'row', sm: 'column', xs: 'column' },
+                padding: '5px',
+                marginBottom: '140px'
             }}>
-                <Typography variant="h3">
-                    Crafted with excellent material.
-                </Typography>
-                <Typography>
-                    Donec mattis porta eros, aliquet finibus risus interdum at. Nulla vivethe as it was for us to know what was to be done.
-                </Typography>
-                <Button
-                    variant="outlined"
-                    sx={{
-                        color: '#2F2F2F',
-                        border: '1px solid #2F2F2F',
-                        borderRadius: '20px',
-                        ':hover': {
-                            backgroundColor: '#2F2F2F',
-                            color: 'white',
-                            border: '1px solid #2F2F2F',
-                        }
-                    }}
-                >
-                    Explore
-                </Button>
-            </Box>
+                <Box sx={{
+                    display: 'flex',
+                    gap: '20px',
+                    flexDirection: 'column',
+                    justifyContent: 'center',
+                    alignItems: 'flex-start',
+                    width: { md: '265px', sm: '90%' },
+                    margin: 'auto',
+                    marginBottom: { xs: '75px' }
+                }}>
+                    <Typography variant="h3">
+                        Crafted with excellent material.
+                    </Typography>
+                    <Typography>
+                        Donec mattis porta eros, aliquet finibus risus interdum at. Nulla vivethe as it was for us to know what was to be done.
+                    </Typography>
+                    <CustomButton></CustomButton>
+                </Box>
 
-            <Box sx={{ flexGrow: 1 }}>
-                <Grid
-                    container spacing={{ xs: 2, md: 2 }}
-                    columns={{ xs: 4, sm: 8, md: 12 }}
-                    sx={{ justifyContent: 'space-between', }}
-                >
-                    {
-                        products.map((product, i) => {
-                            return <Grid item key={i} sx={{ margin: 'auto' }}>
-                                <SmallCard></SmallCard>
-                            </Grid>
-                        })
-                    }
-                </Grid>
+                <Box sx={{ flexGrow: 1, }}>
+                    <Grid
+                        container spacing={2}
+                        columns={{ lg: '4' }}
+                        sx={{ justifyContent: 'space-around' }}
+                    >
+                        {
+                            products.map((product, i) => {
+                                return <Grid item key={i} sx={{}}>
+                                    <SmallCard></SmallCard>
+                                </Grid>
+                            })
+                        }
+                    </Grid>
+                </Box>
             </Box>
         </Box>
     );

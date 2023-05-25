@@ -9,13 +9,12 @@ const SmallCard = ({ img }) => {
     return (
         <>
             <Box sx={{
-                // border: '1px solid red',
                 position: 'relative',
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'center',
                 alignItems: 'center',
-                width: '296px',
+                // width: '270px',
                 height: '405px',
                 '& img': {
                     maxWidth: '189px',
@@ -26,14 +25,15 @@ const SmallCard = ({ img }) => {
                 },
                 ':hover': {
                     backgroundColor: '#DCE5E4',
-                    height: '296px',
+                    height: '307px',
+                    width: '270px',
                     borderRadius: '20px',
                     '& img': {
                         position: 'absolute',
                         top: '-90px'
                     },
                     '& h5': {
-                        marginTop: '235px'
+                        marginTop: '245px'
                     },
                     '& button': {
                         display: 'block'
